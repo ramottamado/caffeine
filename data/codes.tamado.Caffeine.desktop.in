@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Caffeine
+Exec=codes.tamado.Caffeine
+Icon=codes.tamado.Caffeine
+Terminal=false
+Type=Application
+Categories=Utility;
+Keywords=GTK;
+StartupNotify=true
+DBusActivatable=true

@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="33.750061mm" height="33.750061mm">
+  <defs>
+    <linearGradient id="cupGrad" x1="30" y1="45" x2="90" y2="115" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#f6f5f4"/>
+      <stop offset="60%" stop-color="#e1dedb"/>
+      <stop offset="100%" stop-color="#d0cbc7"/>
+    </linearGradient>
+    
+    <linearGradient id="cupHighlight" x1="60" y1="45" x2="60" y2="55" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="handleGrad" x1="85" y1="60" x2="102" y2="85" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#f6f5f4"/>
+      <stop offset="100%" stop-color="#b5b0aa"/>
+    </linearGradient>
+
+    <linearGradient id="coffeeGrad" x1="35" y1="50" x2="85" y2="70" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#3d1e11"/>
+      <stop offset="70%" stop-color="#542815"/>
+      <stop offset="100%" stop-color="#67321a"/>
+    </linearGradient>
+
+    <linearGradient id="rimGrad" x1="60" y1="43" x2="60" y2="57" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#d0cbc7"/>
+    </linearGradient>
+
+    <linearGradient id="steamGrad" x1="0" y1="1" x2="0" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.1"/>
+      <stop offset="30%" stop-color="#e1dedb" stop-opacity="0.65"/>
+      <stop offset="70%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+
+    <filter id="dropShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="5" stdDeviation="4" flood-color="#1a1a1a" flood-opacity="0.18"/>
+    </filter>
+    
+    <filter id="steamGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#steamGlow)">
+    <path d="M 44 46 C 36 30, 52 22, 42 6 C 56 18, 44 32, 52 46 Z" 
+          fill="url(#steamGrad)"/>
+    <path d="M 60 48 C 50 28, 70 18, 58 2 C 76 16, 58 32, 70 48 Z" 
+          fill="url(#steamGrad)"/>
+    <path d="M 76 47 C 70 32, 84 25, 74 8 C 88 20, 78 34, 84 47 Z" 
+          fill="url(#steamGrad)"/>
+  </g>
+
+  <g filter="url(#dropShadow)">
+    <path d="M 82 58 C 96 58, 103 66, 103 74 C 103 83, 95 88, 80 88" 
+          fill="none" stroke="url(#handleGrad)" stroke-width="8.5" stroke-linecap="round"/>
+    <path d="M 82 60 C 93 60, 98 66, 98 74 C 98 81, 91 84, 80 84" 
+          fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
+
+    <path d="M 28 50 C 28 50, 25 93, 42 106 C 52 113, 68 113, 78 106 C 95 93, 92 50, 92 50 Z" 
+          fill="url(#cupGrad)"/>
+
+    <ellipse cx="60" cy="50" rx="32" ry="8" fill="url(#rimGrad)"/>
+    <ellipse cx="60" cy="51" rx="29" ry="6.5" fill="#a5a09a"/>
+    <ellipse cx="60" cy="52" rx="28" ry="6" fill="url(#coffeeGrad)"/>
+
+    <ellipse cx="60" cy="52" rx="27" ry="5.5" fill="none" stroke="#87472a" stroke-width="0.75" opacity="0.4"/>
+
+    <path d="M 29 55 C 31 82, 42 102, 60 110 C 78 102, 89 82, 91 55 C 80 58, 40 58, 29 55 Z" 
+          fill="url(#cupHighlight)" opacity="0.35"/>
+  </g>
+</svg>

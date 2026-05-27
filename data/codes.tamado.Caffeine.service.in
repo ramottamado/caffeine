@@ -1,0 +1,3 @@
+[D-BUS Service]
+Name=codes.tamado.Caffeine
+Exec=@bindir@/codes.tamado.Caffeine --gapplication-service

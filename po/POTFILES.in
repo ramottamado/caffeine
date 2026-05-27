@@ -1,0 +1,8 @@
+# List of source files containing translatable strings.
+# Please keep this file sorted alphabetically.
+data/codes.tamado.Caffeine.desktop.in
+data/codes.tamado.Caffeine.metainfo.xml.in
+data/codes.tamado.Caffeine.gschema.xml
+src/main.js
+src/window.js
+src/window.ui
