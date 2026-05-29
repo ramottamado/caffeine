@@ -19,9 +19,11 @@
 
   <translation type="gettext">caffeine</translation>
   <!-- All graphical applications having a desktop file must have this tag in the MetaInfo.
-     If this is present, appstreamcli compose will pull icons, keywords and categories from the desktop file. -->
+     If this is present, appstreamcli compose will pull icons, keywords and categories from the desktop
+  file. -->
   <launchable type="desktop-id">codes.tamado.Caffeine.desktop</launchable>
-  <!-- Use the OARS website (https://hughsie.github.io/oars/generate.html) to generate these and make sure to use oars-1.1 -->
+  <!-- Use the OARS website (https://hughsie.github.io/oars/generate.html) to generate these and
+  make sure to use oars-1.1 -->
   <content_rating type="oars-1.1" />
 
   <!-- Applications should set a brand color in both light and dark variants like so -->
@@ -29,6 +31,13 @@
     <color type="primary" scheme_preference="light">#ff00ff</color>
     <color type="primary" scheme_preference="dark">#993d3d</color>
   </branding>
+
+  <screenshots>
+    <screenshot type="default">
+      <image>https://example.org/example1.png</image>
+      <caption>A caption</caption>
+    </screenshot>
+  </screenshots>
 
   <releases>
     <release version="0.1.0" date="2026-05-28">

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
-  <requires lib="gtk" version="4.0"/>
-  <requires lib="Adw" version="1.0"/>
+  <requires lib="gtk" version="4.0" />
+  <requires lib="Adw" version="1.0" />
   <template class="CaffeineWindow" parent="AdwApplicationWindow">
     <property name="title" translatable="yes">Caffeine</property>
     <property name="default-width">450</property>
@@ -21,28 +21,28 @@
         </child>
         <property name="content">
           <object class="GtkBox">
-        <property name="orientation">vertical</property>
+            <property name="orientation">vertical</property>
             <child>
-          <object class="GtkLabel" id="label">
-            <property name="label" translatable="yes">Caffeine</property>
-            <style>
-              <class name="title-1"/>
-            </style>
-          </object>
-              </child>
+              <object class="GtkImage" id="mainIcon">
+                <property name="icon-name">codes.tamado.Caffeine</property>
+                <property name="margin-bottom">5</property>
+                <property name="margin-top">10</property>
+                <property name="pixel-size">96</property>
+              </object>
+            </child>
             <child>
               <object class="AdwPreferencesPage" id="pref">
-            <child>
-              <object class="AdwPreferencesGroup">
                 <child>
-                  <object class="AdwSwitchRow" id="suspendRow">
-                    <property name="title">Enable Caffeine</property>
-                    <property name="active">true</property>
+                  <object class="AdwPreferencesGroup">
+                    <child>
+                      <object class="AdwSwitchRow" id="suspendRow">
+                        <property name="title" translatable="yes">Enable Caffeine</property>
+                        <property name="active">true</property>
+                      </object>
+                    </child>
                   </object>
                 </child>
               </object>
-            </child>
-          </object>
             </child>
           </object>
         </property>
