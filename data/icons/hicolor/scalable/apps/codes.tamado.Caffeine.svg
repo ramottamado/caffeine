@@ -11,7 +11,7 @@
       <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
     </linearGradient>
 
-    <linearGradient id="handleGrad" x1="85" y1="60" x2="102" y2="85" gradientUnits="userSpaceOnUse">
+    <linearGradient id="handleGrad" x1="85" y1="60" x2="110" y2="90" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#f6f5f4"/>
       <stop offset="100%" stop-color="#b5b0aa"/>
     </linearGradient>
@@ -27,17 +27,17 @@
       <stop offset="100%" stop-color="#d0cbc7"/>
     </linearGradient>
 
-    <linearGradient id="steamGradGrey" x1="0" y1="1" x2="0" y2="0" gradientUnits="userSpaceOnUse">
+    <linearGradient id="steamGradGrey" x1="0" y1="1" x2="0" y2="0" gradientUnits="objectBoundingBox">
       <stop offset="0%" stop-color="#5e5c64" stop-opacity="0.1"/>
       <stop offset="30%" stop-color="#77767b" stop-opacity="0.55"/>
-      <stop offset="70%" stop-color="#9a999d" stop-opacity="0.75"/>
+      <stop offset="70%" stop-color="#9a999d" stop-opacity="0.8"/>
       <stop offset="100%" stop-color="#9a999d" stop-opacity="0"/>
     </linearGradient>
 
     <filter id="dropShadow" x="-10%" y="-10%" width="130%" height="130%">
       <feDropShadow dx="0" dy="5" stdDeviation="4" flood-color="#1a1a1a" flood-opacity="0.18"/>
     </filter>
-    
+
     <filter id="steamSoftness" x="-30%" y="-30%" width="160%" height="160%">
       <feGaussianBlur stdDeviation="2" result="blur"/>
       <feComposite in="SourceGraphic" in2="blur" operator="over"/>
@@ -45,10 +45,10 @@
   </defs>
 
   <g filter="url(#dropShadow)">
-    <path d="M 82 58 C 96 58, 103 66, 103 74 C 103 83, 95 88, 80 88" 
-          fill="none" stroke="url(#handleGrad)" stroke-width="8.5" stroke-linecap="round"/>
-    <path d="M 82 60 C 93 60, 98 66, 98 74 C 98 81, 91 84, 80 84" 
-          fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
+    <path d="M 82 58 C 112 55, 115 92, 78 95" 
+          fill="none" stroke="url(#handleGrad)" stroke-width="9" stroke-linecap="round"/>
+    <path d="M 82 60 C 107 58, 109 87, 78 91" 
+          fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
 
     <path d="M 28 50 C 28 50, 25 93, 42 106 C 52 113, 68 113, 78 106 C 95 93, 92 50, 92 50 Z" 
           fill="url(#cupGrad)"/>
@@ -64,11 +64,11 @@
   </g>
 
   <g filter="url(#steamSoftness)">
-    <path d="M 44 51 C 36 40, 52 32, 44 20 C 53 28, 44 40, 52 51 Z" 
+    <path d="M 45 51 C 32 42, 50 30, 44 20 C 55 30, 38 42, 45 51 Z" 
           fill="url(#steamGradGrey)"/>
-    <path d="M 60 53 C 50 40, 70 28, 60 15 C 72 26, 58 40, 70 53 Z" 
+    <path d="M 60 54 C 65 42, 50 28, 62 14 C 56 28, 72 42, 60 54 Z" 
           fill="url(#steamGradGrey)"/>
-    <path d="M 76 52 C 70 41, 84 33, 76 22 C 86 31, 78 41, 84 52 Z" 
+    <path d="M 75 51 C 80 42, 65 32, 76 20 C 70 32, 86 42, 75 51 Z" 
           fill="url(#steamGradGrey)"/>
   </g>
 </svg>
