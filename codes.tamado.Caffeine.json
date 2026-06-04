@@ -35,9 +35,8 @@
             "buildsystem": "meson",
             "sources": [
                 {
-                    "type": "git",
-                    "url": "file:///var/home/tamado/Documents/workspace/gjs/caffeine",
-                    "branch": "main"
+                    "type": "dir",
+                    "path": "/var/home/tamado/Documents/workspace/gjs/caffeine"
                 }
             ],
             "config-opts": [
