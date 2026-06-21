@@ -32,25 +32,6 @@ export const CaffeineWindow = GObject.registerClass({
     constructor(application) {
         super({ application });
 
-        // Bind active → subtitle with a transform function
-        this._suspendRow.bind_property_full(
-            'active',                         // source property
-            this._suspendRow,                 // target object (itself)
-            'subtitle',                       // target property
-            GObject.BindingFlags.SYNC_CREATE, // apply immediately on bind
-            (_binding, value) => [true, value ? 'Enabled' : 'Disabled'],
-            null                              // no reverse transform needed
-        );
-
-        // Separately handle the actual inhibit logic
-        this._suspendRow.connect('notify::active', (row) => {
-            if (row.active) {
-                this._startInhibit();
-            } else {
-                this._releaseInhibit();
-            }
-        });
-
         this.connect('destroy', () => this._releaseInhibit());
 
         this._startInhibit();
