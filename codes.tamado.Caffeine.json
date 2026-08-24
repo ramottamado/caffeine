@@ -36,7 +36,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "file:///var/home/tamado/Documents/workspace/gjs/caffeine",
+                    "url": "https://github.com/ramottamado/caffeine.git",
                     "branch": "main"
                 }
             ],
