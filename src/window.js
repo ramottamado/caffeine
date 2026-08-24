@@ -25,7 +25,7 @@ import Adw from 'gi://Adw';
 export const CaffeineWindow = GObject.registerClass({
     GTypeName: 'CaffeineWindow',
     Template: 'resource:///codes/tamado/Caffeine/window.ui',
-    InternalChildren: ['label'],
+    // InternalChildren: [],
 }, class CaffeineWindow extends Adw.ApplicationWindow {
     _inhibitCookie = 0;  // 0 means not inhibited
 
