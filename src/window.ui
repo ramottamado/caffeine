@@ -5,6 +5,7 @@
   <template class="CaffeineWindow" parent="AdwApplicationWindow">
     <property name="title" translatable="yes">Caffeine</property>
     <property name="default-width">200</property>
+    <property name="default-height">600</property>
     <property name="content">
       <object class="AdwToolbarView">
         <child type="top">
@@ -22,11 +23,11 @@
         <property name="content">
           <object class="GtkBox">
             <property name="orientation">vertical</property>
+            <property name="halign">center</property>
+            <property name="valign">center</property>
             <child>
               <object class="GtkImage" id="mainIcon">
                 <property name="icon-name">codes.tamado.Caffeine</property>
-                <property name="margin-bottom">5</property>
-                <property name="margin-top">10</property>
                 <property name="pixel-size">96</property>
               </object>
             </child>
