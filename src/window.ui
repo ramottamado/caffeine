@@ -4,8 +4,7 @@
   <requires lib="Adw" version="1.0" />
   <template class="CaffeineWindow" parent="AdwApplicationWindow">
     <property name="title" translatable="yes">Caffeine</property>
-    <property name="default-width">500</property>
-    <property name="default-height">530</property>
+    <property name="default-width">200</property>
     <property name="content">
       <object class="AdwToolbarView">
         <child type="top">
