@@ -1,0 +1,6 @@
+# Meson build directory
+_build/
+
+# flatpak-builder output and cache
+build/
+.flatpak-builder/

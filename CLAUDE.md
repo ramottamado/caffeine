@@ -15,6 +15,7 @@ Built with Meson; distributed as a Flatpak (manifest: `codes.tamado.Caffeine.jso
 meson setup _build
 meson compile -C _build
 meson test -C _build          # validates .desktop, metainfo, and gschema files (skipped if validators are missing)
+meson test -C _build 'Validate appstream file'   # run one test by name (see data/meson.build for names)
 meson install -C _build
 
 # Flatpak (manifest uses a local "dir" source, so it builds the working tree)
@@ -24,6 +25,8 @@ flatpak run codes.tamado.Caffeine
 
 There are no unit tests or linters configured; `meson test` only runs the data-file validators defined in `data/meson.build`.
 
+The Flatpak's `finish-args` grant only display access (Wayland, fallback X11, DRI). In the sandbox, GTK routes `inhibit()` through the Inhibit portal, so no extra permission is needed for that. A feature that needs network, filesystem, or other D-Bus access has to add it to the manifest.
+
 ## Architecture
 
 - **Launcher**: `src/codes.tamado.Caffeine.in` is configured by Meson into a `gjs -m` script that calls `imports.package.init(...)` and dynamically imports `resource:///codes/tamado/Caffeine/js/main.js`. JS is never loaded from the filesystem at runtime.
@@ -32,7 +35,7 @@ There are no unit tests or linters configured; `meson test` only runs the data-f
   - `codes.tamado.Caffeine.data.gresource.xml` — UI templates under `/codes/tamado/Caffeine/`
 
   **Adding a new JS file or `.ui` file requires registering it in the corresponding gresource XML**, and files with translatable strings must also be added to `po/POTFILES.in`.
-- **`src/main.js`**: `CaffeineApplication` (`Adw.Application`) — defines `app.quit` (Ctrl+Q) and `app.about` actions, creates the window on activate. Calls `pkg.initGettext()` so `_()` is available globally.
+- **`src/main.js`**: `CaffeineApplication` (`Adw.Application`) — defines `app.quit` (Ctrl+Q) and `app.about` actions, creates the window on activate. Calls `pkg.initGettext()` and `pkg.initFormat()` so `_()` and `String.prototype.format` are available globally.
 - **`src/window.js` + `src/window.ui`**: `CaffeineWindow` (`Adw.ApplicationWindow`) bound to the UI template via `GObject.registerClass({ Template })`. The core behavior lives here: on construction it calls `application.inhibit(..., Gtk.ApplicationInhibitFlags.SUSPEND, ...)` and releases the cookie on `destroy`. `_inhibitCookie === 0` means "not inhibiting"; guards prevent stacking or double-releasing cookies.
 - **`data/`**: desktop file, AppStream metainfo, D-Bus service, (currently empty) GSettings schema, and icon. `.in` files are processed by Meson (i18n merge or `configure_file`).
 
@@ -40,4 +43,5 @@ There are no unit tests or linters configured; `meson test` only runs the data-f
 
 - GObject classes are defined with `GObject.registerClass` and exported as `const`; private members use a leading underscore (`_startInhibit`).
 - Imports use `gi://` URIs; `main.js` pins versions (`Gtk?version=4.0`, `Adw?version=1`), other modules import unversioned.
+- The app ID `codes.tamado.Caffeine` is hard-coded in many places: file names under `data/` and `src/`, the Flatpak manifest, `application_id` and the About icon in `main.js`, the icon name in `window.ui`, and the gschema id. Renaming it means changing all of them.
 - Version `0.1.0` is duplicated in `meson.build` and the About dialog in `main.js` — update both together.
