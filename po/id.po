@@ -1,0 +1,60 @@
+# Indonesian translation for caffeine.
+# Copyright (C) 2026 Tamado Sitohang
+# This file is distributed under the same license as the caffeine package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: caffeine\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-26 04:59+0000\n"
+"PO-Revision-Date: 2026-10-26 12:00+0700\n"
+"Last-Translator: Tamado Sitohang <ramottamado@gmail.com>\n"
+"Language-Team: Indonesian\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: data/codes.tamado.Caffeine.desktop.in:2
+#: data/codes.tamado.Caffeine.metainfo.xml.in:7 src/window.ui:6
+msgid "Caffeine"
+msgstr "Caffeine"
+
+#: data/codes.tamado.Caffeine.desktop.in:8
+msgid "GTK;"
+msgstr "GTK;"
+
+#: data/codes.tamado.Caffeine.metainfo.xml.in:8
+msgid "Keep your computer awake"
+msgstr "Buat komputer Anda tetap terjaga"
+
+#: data/codes.tamado.Caffeine.metainfo.xml.in:10
+msgid ""
+"Caffeine stops your computer from suspending while its window is open. Close "
+"the window and your normal power settings apply again."
+msgstr ""
+"Caffeine mencegah komputer Anda masuk ke mode tidur selama jendelanya "
+"terbuka. Tutup jendelanya dan pengaturan daya normal Anda akan berlaku "
+"kembali."
+
+#: data/codes.tamado.Caffeine.metainfo.xml.in:41
+msgid "Main window"
+msgstr "Jendela utama"
+
+#. Translators: Replace "translator-credits" with your name/username, and optionally an email or URL.
+#: src/main.js:58
+msgid "translator-credits"
+msgstr "Tamado Sitohang"
+
+#: src/window.js:47
+msgid "Caffeine is keeping the system awake"
+msgstr "Caffeine membuat sistem tetap terjaga"
+
+#: src/window.ui:16
+msgid "Main Menu"
+msgstr "Menu Utama"
+
+#: src/window.ui:43
+msgid "_About Caffeine"
+msgstr "_Tentang Caffeine"
