@@ -2,12 +2,15 @@
 <component type="desktop-application">
   <id>codes.tamado.Caffeine</id>
   <metadata_license>CC0-1.0</metadata_license>
-  <project_license>MIT</project_license>
+  <project_license>GPL-3.0-or-later</project_license>
 
   <name>Caffeine</name>
-  <summary>Caffeine</summary>
+  <summary>Keep your computer awake</summary>
   <description>
-    <p>Caffeine helps disable suspend</p>
+    <p>
+      Caffeine stops your computer from suspending while its window is open.
+      Close the window and your normal power settings apply again.
+    </p>
   </description>
 
   <developer id="codes.tamado">
@@ -28,24 +31,21 @@
 
   <!-- Applications should set a brand color in both light and dark variants like so -->
   <branding>
-    <color type="primary" scheme_preference="light">#ff00ff</color>
-    <color type="primary" scheme_preference="dark">#993d3d</color>
+    <color type="primary" scheme_preference="light">#e8d5c4</color>
+    <color type="primary" scheme_preference="dark">#5e3c22</color>
   </branding>
 
   <screenshots>
     <screenshot type="default">
-      <image>https://example.org/example1.png</image>
-      <caption>A caption</caption>
+      <image>https://raw.githubusercontent.com/ramottamado/caffeine/main/data/screenshots/caffeine-00.png</image>
+      <caption>Main window</caption>
     </screenshot>
   </screenshots>
 
   <releases>
     <release version="0.1.0" date="2026-05-28">
       <description translate="no">
-        <p>Release description</p>
-        <ul>
-          <li>First release</li>
-        </ul>
+        <p>First release.</p>
       </description>
     </release>
   </releases>
