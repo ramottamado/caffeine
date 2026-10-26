@@ -44,7 +44,7 @@ export const CaffeineWindow = GObject.registerClass({
         this._inhibitCookie = this.application.inhibit(
             this,                                    // window (can be null)
             Gtk.ApplicationInhibitFlags.SUSPEND,     // prevent suspend
-            'Caffeine is keeping the system awake'   // reason shown to the user
+            _('Caffeine is keeping the system awake') // reason shown to the user
         );
     }
 
