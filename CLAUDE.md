@@ -17,7 +17,7 @@ meson compile -C _build
 meson test -C _build          # validates .desktop, metainfo, and gschema files (skipped if validators are missing)
 meson install -C _build
 
-# Flatpak (builds from the git remote's main branch per the manifest, not the local tree)
+# Flatpak (manifest uses a local "dir" source, so it builds the working tree)
 flatpak-builder --user --install --force-clean build codes.tamado.Caffeine.json
 flatpak run codes.tamado.Caffeine
 ```

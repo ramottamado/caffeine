@@ -15,7 +15,7 @@ flatpak-builder --user --install --force-clean build codes.tamado.Caffeine.json
 flatpak run codes.tamado.Caffeine
 ```
 
-The manifest builds from the `main` branch of this repository on GitHub, so local changes that aren't pushed won't be included.
+The manifest builds from your local checkout.
 
 ### From source
 
